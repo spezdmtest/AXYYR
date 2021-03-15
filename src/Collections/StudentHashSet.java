@@ -1,3 +1,5 @@
+package Collections;
+
 import java.util.Objects;
 
 class StudentHashSet implements Comparable {

@@ -1,3 +1,5 @@
+package Collections;
+
 public class Student implements Comparable {
     int id;
     String name;
