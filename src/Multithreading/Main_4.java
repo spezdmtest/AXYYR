@@ -1,4 +1,7 @@
 package Multithreading;
+
+import java.util.concurrent.locks.ReentrantLock;
+
 /*** Синхронизация статических методов***/
 public class Main_4 {
     public static void main(String[] args) throws InterruptedException {
