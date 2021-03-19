@@ -4,7 +4,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /*** ReentrantLock - можно более гибко синхранизироваться ***/
-public class Main_11 {
+public class Main_11_ReentrantLock {
     public static void main(String[] args) throws InterruptedException {
         Resource resource = new Resource();
         resource.setI(5);

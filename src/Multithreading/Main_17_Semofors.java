@@ -2,9 +2,9 @@ package Multithreading;
 
 import java.util.concurrent.Semaphore;
 
-public class Main_17_Semofor {
+public class Main_17_Semofors{
     public static void main(String[] args) {
-        Semaphore table = new Semaphore(7);
+        Semaphore table = new Semaphore(1);
         Person person1 = new Person();
         Person person2 = new Person();
         Person person3  = new Person();
