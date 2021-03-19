@@ -4,7 +4,7 @@ import java.util.concurrent.Semaphore;
 
 public class Main_17_Semofor {
     public static void main(String[] args) {
-        Semaphore table = new Semaphore(2);
+        Semaphore table = new Semaphore(7);
         Person person1 = new Person();
         Person person2 = new Person();
         Person person3  = new Person();
