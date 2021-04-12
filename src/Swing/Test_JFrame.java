@@ -2,7 +2,7 @@ package Swing;
 import javax.swing.*;
 import java.awt.*;
 
-public class Jframe {
+public class Test_JFrame {
     public static void main(String[] args) {
         ImageIcon img = new ImageIcon("C:\\Users\\spezdm\\IdeaProjects\\AXYYR\\src\\Swing\\java.png");
         JFrame jFrame = new JFrame() {};

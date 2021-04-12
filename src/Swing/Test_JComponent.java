@@ -9,7 +9,7 @@ import java.awt.geom.Rectangle2D;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class Jcomponent {
+public class Test_JComponent {
     public static void main(String[] args) {
          JFrame jFrame = getFrame();
 //       Font font = new Font ("Consolas",Font.BOLD,20);
@@ -29,10 +29,11 @@ public class Jcomponent {
             g2.drawString("Hello World !",20,20);
             Point2D p1 = new Point2D.Double(70,70);
             Point2D p2 = new Point2D.Double(190,190);
-            Line2D line2D = new Line2D.Double(70,70,190,190);
+            Line2D line2D = new Line2D.Double(p1,p2);
             //Line2D line2D = new Line2D.Double(70,70,190,190);
             g2.draw(line2D);
             Ellipse2D ellipse2D = new Ellipse2D.Double(230,70,140,170);
+            ellipse2D.setFrameFromDiagonal(p1,p2);
            // g2.draw(ellipse2D);
             g2.setPaint(Color.blue);
             g2.fill(ellipse2D); // закрашиваем элипс
@@ -41,7 +42,7 @@ public class Jcomponent {
             try {
                 URL url = new URL("https://i0.wp.com/proselyte.net/wp-content/uploads/2016/02/java-oracle.png");
                 Image image = new ImageIcon(url).getImage();
-                g2.drawImage(image,220,70,null);
+                g2.drawImage(image,450,70,null);
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }
@@ -58,7 +59,7 @@ public class Jcomponent {
         Dimension dimension = toolkit.getScreenSize();
         //jFrame.setSize(500,300);
         //jFrame.setLocation(600,400);
-        jFrame.setBounds(dimension.width / 2 - 250, dimension.height / 2 - 200, 500, 400);
+        jFrame.setBounds(dimension.width / 2 - 600, dimension.height / 2 - 400, 1200, 800);
         jFrame.setTitle("this my app");
         jFrame.setIconImage(img.getImage());
         return jFrame;
