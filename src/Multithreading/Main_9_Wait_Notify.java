@@ -5,7 +5,7 @@ public class Main_9_Wait_Notify {
         ThreadB threadB = new ThreadB();
         threadB.start();
         synchronized (threadB) {
-            threadB.wait();
+           threadB.wait();
         }
         System.out.println(threadB.total);
     }
