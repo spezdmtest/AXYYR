@@ -2,25 +2,20 @@ package Swing;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 
-public class Test_ActionListener {
-
+public class Test_WindowListener {
     public static void main(String[] args) {
-        JFrame jFrame = getFrame();
-        JPanel jPanel = new JPanel();
-        jFrame.add(jPanel);
-        JButton jButton = new JButton("submit");
-        jPanel.add(jButton);
-        jButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-            jPanel.setBackground(Color.blue);
-            }
-        });
+    JFrame jFrame = getFrame();
+    jFrame.addWindowListener(new WindowAdapter() {
+        @Override
+        public void windowClosing(WindowEvent e) {
+            int i = 0;
+        }
+    });
     }
-
 
     static JFrame getFrame() {
         ImageIcon img = new ImageIcon("C:\\Users\\spezdm\\IdeaProjects\\AXYYR\\src\\Swing\\java.png");
@@ -31,12 +26,10 @@ public class Test_ActionListener {
         Dimension dimension = toolkit.getScreenSize();
         //jFrame.setSize(500,300);
         //jFrame.setLocation(600,400);
-        jFrame.setBounds(dimension.width / 2 - 600, dimension.height / 2 - 400, 1200, 800);
+        jFrame.setBounds(dimension.width/2-250,dimension.height/2-200,500,400);
         jFrame.setTitle("this my app");
         jFrame.setIconImage(img.getImage());
-        return jFrame;
+        return  jFrame;
     }
+
 }
-
-
-
