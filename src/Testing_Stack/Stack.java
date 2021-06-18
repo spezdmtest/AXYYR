@@ -5,7 +5,7 @@ public class Stack <T> {
     private Node<T> head;
 
     public T peek() {
-         return head.value;
+        return head.value;
     }
 
     public T pop() {
@@ -43,5 +43,4 @@ public class Stack <T> {
             this.value = value;
         }
     }
-
 }
